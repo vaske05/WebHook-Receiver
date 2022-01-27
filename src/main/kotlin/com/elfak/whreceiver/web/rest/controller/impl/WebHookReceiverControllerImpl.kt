@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController
 @RequiredArgsConstructor
 class WebHookReceiverControllerImpl : WebHookReceiverController {
 
-    private val logger = LoggerFactory.getLogger(javaClass);
+    private val logger = LoggerFactory.getLogger(javaClass)
 
     override fun receiveCovidData(covidDataRequest: CovidDataRequest): ResponseEntity<*>? {
         logger.info("--- COVID data ---")
-        logger.info("updated" + covidDataRequest.updated)
+        logger.info("updated: " + covidDataRequest.updated)
         logger.info("country: " + covidDataRequest.country)
         logger.info("cases: " + covidDataRequest.cases)
         logger.info("todayCases: " + covidDataRequest.todayCases)
